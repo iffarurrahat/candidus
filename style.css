@@ -1,0 +1,136 @@
+:root{
+    --black:#1C1C1C;
+    --gray: #919191;
+    --light-gray: #EBEBEB;
+    --hot-pink: #FF214F;
+    --primary-font:'Roboto', sans-serif;
+}
+body{
+    background-color: var(--light-gray);
+    font-family: var(--primary-font);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+nav > ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.section--primary{
+    padding: 14rem 25px;
+    background-color: var(--light-gray);
+}
+.section--secondary{
+    padding: 14rem 25px;
+    background-color: var(--black);
+}
+.section__title__container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.section__title--primary, 
+.section__title--secondary, 
+.section__title--tertiary{
+    flex-shrink: 0;
+}
+.section__title--primary{
+    color: var(--black);
+}
+.section__title--secondary{
+    color: var(--hot-pink);
+}
+.section__title--tertiary{
+    color: var(--light-gray);
+}
+
+.line--primary, 
+.line--secondary,
+.line--tertiary{
+    width: 100%;
+    height: 1px;
+    margin-left: 5px;
+}
+.line--primary{
+    background-color: var(--black);
+}
+.line--secondary{
+    background-color: var(--hot-pink);
+}
+.line--tertiary{
+    background-color: var(--light-gray);
+}
+
+.section__text--primary, 
+.section__text--secondary, 
+.section__text--tertiary{
+    font-size: 3em;
+    font-weight: 300;
+}
+.section__text--primary{
+    color: var(--black);
+}
+.section__text--secondary{
+    color: var(--hot-pink);
+}
+.section__text--tertiary{
+    color: var(--light-gray);
+}
+.photo__gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.photo__gallery > img{
+    height: 100%;
+    width: 100%;
+}
+.long--img{
+    grid-row: span 2;
+}
+.logo__container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+.fa-brands{
+    margin-left: 2em;
+}
+@media only screen and (max-width: 850px) {
+    .photo__gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .line--primary, 
+    .line--secondary,
+    .line--tertiary{
+        display: none;
+    }
+    .section__title__container{
+        justify-content: center;
+    }
+    .section__text--primary, 
+    .section__text--secondary, 
+    .section__text--tertiary{
+        font-size: 2.5em;
+        text-align: center;
+    }
+}
